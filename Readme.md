@@ -81,7 +81,7 @@ The completed application should look similar in appearance to the image below:
 
 ![nodejs logo](./public/assets/images/techs/nodejs.png)
 ![npm logo](./public/assets/images/techs/npm.png)
-![html5 logo](./public/assets/images/techs/html5.png)
+![restapi logo](./public/assets/images/techs/restapi.png)
 ![bootstrap logo](./public/assets/images/techs/bootstrap.png)
 ![github logo](./public/assets/images/techs/github.png)
 
