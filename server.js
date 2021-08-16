@@ -1,11 +1,12 @@
 // DEPENDENCIES =================
 const express = require("express");
 const app = express();
-
 const PORT = process.env.PORT || 4500;
 
+app.use(express.static(`${__dirname + "/public"}`));
+
 app.get("/", (req, res) => {
-	res.send("Welcome to our express project");
+	res.send("index.html");
 });
 
 app.listen(PORT, (err) => {
