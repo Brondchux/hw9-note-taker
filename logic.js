@@ -34,8 +34,8 @@ const updateJsonFile = (notesArray) => {
 	notesArray = JSON.stringify(notesArray);
 	fs.writeFile(dbFile, notesArray, (err, data) => {
 		if (err) throw err;
-		extractNotes();
 	});
+	init();
 };
 
 // Delete note
