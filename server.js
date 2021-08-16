@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 4500;
 const path = require("path");
 const bodyParser = require("body-parser");
-const { init, fetchNotes, addNewNote } = require("./logic.js");
+const { init, addNewNote, fetchNotes, removeNote } = require("./logic.js");
 
 app.use(express.static(__dirname + "/public/"));
 app.use(bodyParser.json());
@@ -23,26 +23,28 @@ app.get("/notes", (req, res) => {
 // Fetch notes route
 app.get("/api/notes", (req, res) => {
 	const notes = fetchNotes();
-	// res.redirect("/notes");
-	// res.send(`Available notes: ${JSON.stringify(notes)}`);
+	res.send(notes);
 });
 
 // Add note route
 app.post("/api/notes", (req, res) => {
 	const newNote = {
+		id: Date.now(),
 		title: req.body.title,
 		text: req.body.text,
 	};
 	addNewNote(newNote);
-	console.log(`Add new note title ${req.body.title}`);
-	console.log(`Add new note text ${req.body.text}`);
+	res.send(newNote);
 });
 
 // Delete note route
 app.delete("/api/notes/:id", (req, res) => {
-	res.send("Delete note route");
+	const noteId = req.params.id;
+	removeNote(noteId);
+	res.send(`Deleting note with id of ${noteId}`);
 });
 
+// Server listening port
 app.listen(PORT, (err) => {
 	if (err) throw err;
 	console.log(`listening on PORT ${PORT}`);
