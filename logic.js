@@ -9,13 +9,13 @@ const extractNotes = () => {
 		if (err) return err;
 		const notesJson = data.length > 0 ? JSON.parse(data) : [];
 		notesJson.forEach((note) => {
-			updateNotesArray(note);
+			pushIntoNotesArray(note);
 		});
 	});
 };
 
 // Update notes array
-const updateNotesArray = (noteObj) => {
+const pushIntoNotesArray = (noteObj) => {
 	notesArray.push(noteObj);
 	fetchNotes();
 };
@@ -25,12 +25,13 @@ const fetchNotes = () => notesArray;
 
 // Add new notes
 const addNewNote = (noteObj) => {
-	const combinedNotes = JSON.stringify([...fetchNotes(), noteObj]);
+	const combinedNotes = [...fetchNotes(), noteObj];
 	updateJsonFile(combinedNotes);
 };
 
 // Write to db json file
 const updateJsonFile = (notesArray) => {
+	notesArray = JSON.stringify(notesArray);
 	fs.writeFile(dbFile, notesArray, (err, data) => {
 		if (err) throw err;
 		extractNotes();
@@ -39,13 +40,11 @@ const updateJsonFile = (notesArray) => {
 
 // Delete note
 const removeNote = (noteId) => {
-	console.log(`from removeNote func - Deleting file id`, noteId);
 	const notesArray = fetchNotes();
 	const filteredNotesArray = notesArray.filter(
 		(note) => `${note.id}` !== `${noteId}`
 	);
-	updateJsonFile(JSON.stringify(filteredNotesArray));
-	console.log("filteredNotesArray", filteredNotesArray);
+	updateJsonFile(filteredNotesArray);
 };
 
 // Start the app
