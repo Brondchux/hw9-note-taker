@@ -8,15 +8,15 @@ This project should enable it's users write and store notes for later use. This 
 
 ## Table of Content
 
-1. [Project Description](https://github.com/Brondchux/hw8-team-profile-generator#project-description)
-2. [Author Info](https://github.com/Brondchux/hw8-team-profile-generator#author-info)
-3. [User Story](https://github.com/Brondchux/hw8-team-profile-generator#user-story)
-4. [Acceptance Criteria](https://github.com/Brondchux/hw8-team-profile-generator#acceptance-criteria)
-5. [Mock-Up Preview](https://github.com/Brondchux/hw8-team-profile-generator#mock-up-preview)
-6. [Useful Links](https://github.com/Brondchux/hw8-team-profile-generator#useful-links)
-7. [Tech Stack](https://github.com/Brondchux/hw8-team-profile-generator#tech-stack)
-8. [Credits](https://github.com/Brondchux/hw8-team-profile-generator#credits)
-9. [License](https://github.com/Brondchux/hw8-team-profile-generator#license)
+1. [Project Description](https://github.com/Brondchux/hw9-note-taker#project-description)
+2. [Author Info](https://github.com/Brondchux/hw9-note-taker#author-info)
+3. [User Story](https://github.com/Brondchux/hw9-note-taker#user-story)
+4. [Acceptance Criteria](https://github.com/Brondchux/hw9-note-taker#acceptance-criteria)
+5. [Mock-Up Preview](https://github.com/Brondchux/hw9-note-taker#mock-up-preview)
+6. [Useful Links](https://github.com/Brondchux/hw9-note-taker#useful-links)
+7. [Tech Stack](https://github.com/Brondchux/hw9-note-taker#tech-stack)
+8. [Credits](https://github.com/Brondchux/hw9-note-taker#credits)
+9. [License](https://github.com/Brondchux/hw9-note-taker#license)
 
 ---
 
@@ -72,8 +72,8 @@ The completed application should look similar in appearance to the image below:
 
 ## Useful Links
 
-1. 🗂 [Click me to view github repository for this project](https://github.com/Brondchux/hw8-team-profile-generator/)
-2. 🌍 [Click me to view deployed application on github pages](https://brondchux.github.io/hw8-team-profile-generator/)
+1. 🗂 [Click me to view github repository for this project](https://github.com/Brondchux/hw9-note-taker/)
+2. 🌍 [Click me to view deployed application on github pages](https://brondchux.github.io/hw9-note-taker/)
 
 ---
 
