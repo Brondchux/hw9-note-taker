@@ -1,10 +1,13 @@
 // DEPENDENCIES =================
 const fs = require("fs");
 const dbFile = "./db/db.json";
-const notesArray = [];
+/* changed it to const to enable me empty it out before extracting new elements into it */
+let notesArray = [];
 
 // Fetch all notes
 const extractNotes = () => {
+	// empty notesArray out before pushing in new extracted elements
+	notesArray = [];
 	fs.readFile(dbFile, (err, data) => {
 		if (err) return err;
 		const notesJson = data.length > 0 ? JSON.parse(data) : [];
@@ -17,7 +20,6 @@ const extractNotes = () => {
 // Update notes array
 const pushIntoNotesArray = (noteObj) => {
 	notesArray.push(noteObj);
-	fetchNotes();
 };
 
 // Fetch the existing notes
