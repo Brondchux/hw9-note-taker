@@ -3,12 +3,11 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4500;
 const path = require("path");
-const bodyParser = require("body-parser");
 const { init, addNewNote, fetchNotes, removeNote } = require("./logic.js");
 
 app.use(express.static(__dirname + "/public/"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Homepage route
 app.get("/", (req, res) => {
